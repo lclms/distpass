@@ -1,0 +1,51 @@
+ 
+<content-header name="Accounts" ></content-header>
+<!-- Info boxes -->
+<section id="loginValues" class="content" ng-controller="LoginCtrl as lCtrl">
+
+<!-- home row -->
+<div class="row">
+
+        <div class="row">
+                <!-- Left col -->
+                <div class="col-md-12">
+                  <!-- TABLE: LATEST ORDERS -->
+                  <div class="box box-info">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Account management</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">                     
+                            <div role="form">
+                                    <div class="box-body">                                      
+                                    <div class="box-body">
+                                       <field id="changePassword" label="Change Password" model=""
+                                             placeholder="Insert a password" type="password" grid="12 6 4"></field>
+                                       <field id="confirmPassword" type="password" label="Confirm Password" model=""
+                                             placeholder="Confirm password" grid="12 6 4"></field>
+                                    </div>                                   
+                                  
+                                    <div class="box-footer">
+                                      <button class="btn btn-primary" grid="12 6 4" ng-click="lCtrl.createNewUser()">Save</button>
+                                      <button class="btn btn-alert" grid="12 6 4" ng-click="lCtrl.createNewUser()">Delete account</button>
+                                    </div>
+                                  </div>
+                     </div>
+                                
+
+                    </div>
+                    <!-- /.box-body -->
+                  <!-- /.box-footer -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+              <!-- /.col -->
+              </div>
+ 
+<!-- /.col -->
+</div>
+
+
+
+</section>
+

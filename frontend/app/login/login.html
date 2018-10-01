@@ -1,0 +1,52 @@
+ 
+<content-header name="Login" ></content-header>
+<!-- Info boxes -->
+<section id="loginValues" class="content" ng-controller="LoginCtrl as lCtrl">
+
+<!-- home row -->
+<div class="row">
+
+        <div class="row">
+                <!-- Left col -->
+                <div class="col-md-12">
+                  <!-- TABLE: LATEST ORDERS -->
+                  <div class="box box-info">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Log in</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">                     
+                            <div role="form">
+                                    <div class="box-body">
+                                      <field id="mail" label="Email address" model=""
+                                           placeholder="Insert a email address" grid="12 6 4"></field>                                       
+                                    </div>
+                                    <div class="box-body">
+                                       <field id="password" label="Password" model=""
+                                             placeholder="Insert a password" type="password" grid="12 6 4"></field>
+                                    </div>                                   
+                                  
+                                    <div class="box-footer">
+                                      <button class="btn btn-primary" grid="12 6 4" ng-click="lCtrl.loginInApp()">Login</button>
+                                      
+                                    </div>
+                                  </div>
+                     </div>
+                                
+
+                    </div>
+                    <!-- /.box-body -->
+                  <!-- /.box-footer -->
+                  </div>
+                  <!-- /.box -->
+                </div>
+              <!-- /.col -->
+              </div>
+ 
+<!-- /.col -->
+</div>
+
+
+
+</section>
+

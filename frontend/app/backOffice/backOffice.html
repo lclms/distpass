@@ -1,0 +1,89 @@
+<content-header name="BackOffice" small=""></content-header>
+
+<section class="content" ng-controller="backOfficeCtrl as bfCrt">
+  <div class="row">
+    <!-- Left col -->
+    <div class="col-md-12">
+      <!-- TABLE: LATEST ORDERS -->
+      <div class="box box-info">
+        <div class="box-header with-border">
+          <h3 class="box-title">Manage words</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div role="form">
+                <div class="box-body">
+                  <field id="newWord" label="New word" model=""
+                       placeholder="Insert a new word" grid="12 6 4"></field>
+                       <fieldselectnumber id="lenghtMax" label="Length" model="wCtrl.distPass.lengthMax"
+                       placeholder="Insert the characters value" grid="12 6 4"></fieldselectnumber>
+                </div>             
+              
+                <div class="box-footer">
+                  <button class="btn btn-primary" ng-click="">Save</button>
+                </div>
+              </div>
+          <!-- /.table-responsive -->
+        </div>
+        <!-- /.box-body -->
+
+        <!-- /.box-footer -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+
+
+    <!-- /.col -->
+  </div>
+  <div class="row">
+      <!-- Left col -->
+      <div class="col-md-12">
+        <!-- TABLE: LATEST ORDERS -->
+        <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title">Manage works</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+              <div class="box-body">
+                  <div class="table-responsive" ng-controller="backOfficeCtrl as bfValues">
+                    <table class="table no-margin">
+                      <thead>
+                      <tr>
+                        <th>Work Name</th>
+                        <th>Start date</th>
+                        <th>Type of attack</th>
+                        <th>Jobs done</th>
+                        <th></th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="bfValues in bfValues.distPasss">
+                        <td>{{:: bfValues.name }}</td>
+                        <td>{{:: bfValues.created | date:'yyyy-M-d HH:mm' }}</td>
+                        <td>{{:: bfValues.typeAttack }}</td>
+                        <td>{{:: bfValues.jobsCount }}</td>
+                      <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default" ng-click="">
+                                  Info
+                                </button>
+                          <button type="button" class="btn btn-danger" ng-click="">
+                              Delete
+                                  </button></td>
+                     </tr>
+                     </tbody>
+                    </table>
+            <!-- /.table-responsive -->
+          </div>
+          <!-- /.box-body -->
+  
+          <!-- /.box-footer -->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+  
+  
+      <!-- /.col -->
+    </div>
+</section>

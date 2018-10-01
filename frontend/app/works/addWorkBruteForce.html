@@ -1,0 +1,49 @@
+
+<div class="row">
+    <!-- Left col -->
+    <div class="col-md-12">
+      <!-- TABLE: LATEST ORDERS -->
+      <div class="box box-body">
+        <div class="box-header with-border">
+          <h3 class="box-title">Brute Force Attack</h3>
+        </div>
+        <!-- /.box-header -->
+        <div role="form">
+            <div class="box-body">
+              <field id="name" label="Work Name" model="wCtrl.distPass.name"
+                   placeholder="Insert a name" grid="12 6 4"></field>
+              <fieldselecthash id="typePassword" label="Type of password" model="wCtrl.distPass.typePassword"
+                   placeholder="" grid="12 6 4"></fieldselecthash>
+            </div>
+            <div class="box-body">
+               <fieldselectchartset id="charset" label="Charset" model="wCtrl.distPass.charset"
+                     placeholder="Insert a charset" grid="12 6 4"></fieldselectchartset>
+                <fieldselectnumber id="lenghtMin" label="Length Min" model="wCtrl.distPass.lengthMin"
+                     placeholder="" grid="12 6 4"></fieldselectnumber>
+                <fieldselectnumber id="lenghtMax" label="Length Max" model="wCtrl.distPass.lengthMax"
+                     placeholder="Insert the maximum characters value" grid="12 6 4"></fieldselectnumber>
+              </div>
+            <div class="box-body">
+            
+              <field id="passwordProvided" label="Password" model="wCtrl.distPass.passwordProvided"
+              placeholder="Insert a password"  placeholder="" grid="12 6 4"></field>
+          
+            </div>
+          
+            <div class="box-footer">
+              <button class="btn btn-primary" ng-click="wCtrl.createBF()">Save</button>
+              <button class="btn btn-default" ng-click="wCtrl.refresh()">Cancel</button>
+            </div>
+          </div>
+        <!-- /.box-body -->
+
+        <!-- /.box-footer -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+
+
+    <!-- /.col -->
+  </div>
+ 

@@ -1,0 +1,19 @@
+
+    <ul class="list-group">
+        <li class="list-group-item"><b>Work: </b>{{:: wCtrl.distPass.name }}</li>
+        <li class="list-group-item"><b>Created: </b>{{:: wCtrl.distPass.created | date:'yyyy-M-d HH:mm' }}</li>
+        <li class="list-group-item"><b>Attack: </b>{{:: wCtrl.distPass.typeAttack }}</li>
+        <li class="list-group-item"><b>Tasks: </b>{{:: wCtrl.distPass.jobsCount }}</li>
+        <li class="list-group-item"><b>Password: </b>{{:: wCtrl.distPass.typePassword }}</li>
+        <li class="list-group-item"><b>Password: </b>{{:: wCtrl.distPass.passwordProvided }}</li>
+        <li class="list-group-item"><b>Length Min: </b>{{:: wCtrl.distPass.lengthMin }}</li>
+        <li class="list-group-item"><b>Length Max: </b>{{:: wCtrl.distPass.lengthMax }}</li>
+        <li class="list-group-item"><b>Status: </b>{{:: wCtrl.distPass.status }}</li>
+        <li class="list-group-item"><b>Word Verified: </b>{{:: wCtrl.distPass.totalWordVerified }}</li>
+        <li class="list-group-item"><b>Word time (s): </b>{{:: wCtrl.distPass.crlTimeEndWork-wCtrl.distPass.startWork }}</li>
+        <li class="list-group-item"><b>Charset: </b>{{:: wCtrl.distPass.charset }}</li>
+        <li class="list-group-item"><b>Suggestion: </b>{{:: wCtrl.distPass.suggestion }}</li>
+      </ul>
+      <div class="box-footer">
+        <button class="btn btn-default" ng-click="wCtrl.refresh()">Back to list</button>
+      </div>

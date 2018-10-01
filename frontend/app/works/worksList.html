@@ -1,0 +1,27 @@
+<div class="box-body" >
+
+    <table class="table">
+        <thead>
+            <th>Work Name</th>
+            <th>Created</th>
+            <th>Distributed tasks</th>
+            <th>Time (s)</th>
+            <th>Words/s</th>
+            <th>Status</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="distPass in wCtrl.distPasss">
+              <td>{{:: distPass.name }}</td>
+              <td>{{:: distPass.created | date:'yyyy-M-d HH:mm' }}</td>
+              <td>{{:: distPass.jobsCount }}</td>
+              <td>{{:: distPass.crlTimeEndWork-distPass.startWork }}</td>
+              <td>{{:: distPass.totalWordVerified/(distPass.crlTimeEndWork-distPass.startWork) | number:0 }}</td> 
+              <td>{{:: distPass.status }}</td>              
+              <td class="table-actions"><button type="button"
+                ng-click="wCtrl.showTabSummaryWork(distPass)" class="btn btn-info">Info</button>
+                </td>
+            </tr>
+         </tbody>   
+    </table>
+</div>

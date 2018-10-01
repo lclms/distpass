@@ -1,0 +1,62 @@
+<content-header name="Works" ></content-header>
+
+<section class="content">
+    <div class="nav-tabs-custom" ng-controller="WorkCtrl as wCtrl">
+      <ul class="nav nav-tabs">
+        <li ng-if="wCtrl.tabList" ng-class="{active: wCtrl.tabList}">
+           <a href data-target="#tabList" data-toggle="tab">
+             <i class="fa fa-list-ul"></i> Work list
+          </a>
+       </li>
+       <li ng-if="wCtrl.tabAdd" >
+          <a href data-target="#tabAdd" data-toggle="tab">
+             <i class="fa fa-plus"></i> Add new work
+          </a>
+       </li>
+       <li ng-if="wCtrl.tabWorkSummary" ng-class="{active: wCtrl.tabWorkSummary}">
+          <a href data-target="#tabWorkSummary" data-toggle="tab">
+             <i class="fa fa-info-circle"></i> Work summary
+          </a>
+       </li>
+       <li ng-if="wCtrl.tabWorkStatistic" >
+        <a href data-target="#tabWorkStatistic" data-toggle="tab">
+           <i class="fa fa-dashboard"></i> Work statistic
+        </a>
+        <li ng-if="wCtrl.tabAddWorkBruteForce" ng-class="{active: wCtrl.tabAddWorkBruteForce}">
+                <a href data-target="#tabAddWorkBruteForce" data-toggle="tab">
+                   <i class="fa fa-plus"></i> Add new work
+                </a>
+        </li>
+        <li ng-if="wCtrl.tabAddWorkDictionary" ng-class="{active: wCtrl.tabAddWorkDictionary}">
+                <a href data-target="#tabAddWorkDictionary" data-toggle="tab">
+                   <i class="fa fa-plus"></i> Add new work
+                </a>
+        </li>
+    </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane"
+            id="tabList" ng-if="wCtrl.tabList" ng-class="{active: wCtrl.tabList}"
+            ng-include="'works/worksList.html'"></div>
+        <div class="tab-pane"
+            id="tabContributedWorkList" ng-if="wCtrl.tabContributedWorkList" 
+            ng-include="'works/contributedWorkList.html'"></div>
+        <div class="tab-pane"
+            id="tabAdd" ng-if="wCtrl.tabAdd" 
+            ng-include="'works/add.html'"></div>
+        <div class="tab-pane"
+            id="tabWorkSummary" ng-if="wCtrl.tabWorkSummary" ng-class="{active: wCtrl.tabWorkSummary}"
+            ng-include="'works/workSummary.html'"></div>
+        <div class="tab-pane"
+            id="tabWorkStatistic" ng-if="wCtrl.tabWorkStatistic" 
+            ng-include="'works/workStatistic.html'"></div>
+        <div class="tab-pane"
+            id="tabAddWorkBruteForce" ng-if="wCtrl.tabAddWorkBruteForce" ng-class="{active: wCtrl.tabAddWorkBruteForce}"
+            ng-include="'works/addWorkBruteForce.html'"></div>
+        <div class="tab-pane"
+            id="tabAddWorkDictionary" ng-if="wCtrl.tabAddWorkDictionary" ng-class="{active: wCtrl.tabAddWorkDictionary}"
+            ng-include="'works/addWorkDictionary.html'"></div>
+      </div>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,124 @@
+
+<content-header name="Home" ></content-header>
+      <!-- Info boxes -->
+      <section id="homeValues" class="content" ng-controller="HomeCtrl as hCtrl">
+
+      <!-- home row -->
+      <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+          <!-- TABLE: LATEST ORDERS -->
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Contribute</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <button type="button"  ng-click="hCtrl.StartSocket(1)" class="btn btn-info" style="width: 100%;">Contribute</button>
+              <button type="button"  ng-click="hCtrl.StartSocket(0)" class="btn btn-info" style="width: 100%;">Stop Contribute</button>
+              <!--<button type="button"  onclick="activeSocket(0)" class="btn btn-info" style="width: 100%;">Do not contribute</button-->
+            </div>
+            <!-- /.box-body -->
+          <!-- /.box-footer -->
+          </div>
+          <!-- /.box -->
+        </div>
+      <!-- /.col -->
+      </div>
+      <!-- /.row -->  
+      <!-- home row -->
+      <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+          <!-- TABLE: LATEST ORDERS -->
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Active Works - Top 10</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="table-responsive" ng-controller="HomeCtrl as hValues">
+                <table class="table no-margin">
+                  <thead>
+                  <tr>
+                    <th>Work Name</th>
+                    <th>Start date</th>
+                    <th>Type of attack</th>
+                    <th>Tasks done</th>
+                    <th></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="activeWorks in hValues.distPasss">
+                    <td>{{:: activeWorks.name }}</td>
+                    <td>{{:: activeWorks.created | date:'yyyy-M-d HH:mm' }}</td>
+                    <td>{{:: activeWorks.typeAttack }}</td>
+                    <td>{{:: activeWorks.jobsCount }}</td>
+                  <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default" ng-click="hValues.showSummaryWork(activeWorks)">
+                              Info
+                            </button></td>
+                 </tr>
+                 </tbody>
+                </table>
+                
+                <div ng-show="!hValues.distPasss.length"><br>No works<br></div>
+                
+                <div class="modal fade" id="modal-default">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Info work</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <ul class="list-group">
+
+                          <li class="list-group-item"><b>Work: </b>{{:: hValues.activeWorksSummary.name }}</li>
+                          <li class="list-group-item"><b>Created: </b>{{:: hValues.activeWorksSummary.created | date:'yyyy-M-d HH:mm' }}</li>
+                          <li class="list-group-item"><b>Attack: </b>{{:: hValues.activeWorksSummary.typeAttack }}</li>
+                          <li class="list-group-item"><b>Jobs: </b>{{:: hValues.activeWorksSummary.jobsCount }}</li>
+                          <li class="list-group-item"><b>Password: </b>{{:: hValues.activeWorksSummary.typePassword }}</li>
+                          <li class="list-group-item"><b>Password: </b>{{:: hValues.activeWorksSummary.passwordProvided }}</li>
+                          <li class="list-group-item"><b>Length Min: </b>{{:: hValues.activeWorksSummary.lengthMin }}</li>
+                          <li class="list-group-item"><b>Length Max: </b>{{:: hValues.activeWorksSummary.lengthMax }}</li>
+                          <li class="list-group-item"><b>Status: </b>{{:: hValues.activeWorksSummary.status }}</li>
+                          <li class="list-group-item"><b>Word Verified: </b>{{:: hValues.activeWorksSummary.totalWordVerified }}</li>
+                          <li class="list-group-item"><b>Word time (ms): </b>{{:: hValues.activeWorksSummary.workTime }}</li>
+                          <li class="list-group-item"><b>Charset: </b>{{:: hValues.activeWorksSummary.charset }}</li>
+                        </ul>
+        
+        
+                      </div>
+                      
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        
+                      </div>
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+              </div>
+              <!-- /.table-responsive -->
+            </div>
+            <!-- /.box-body -->
+
+            <!-- /.box-footer -->
+          </div>
+          <!-- /.box -->
+        </div>
+
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+     
+      <!---->
+    <div>
+
+</div>
+</section>
+
