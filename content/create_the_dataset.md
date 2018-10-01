@@ -58,4 +58,4 @@ Only one set of data can be used, and it is up to the user to adapt the system a
 
 ___
 [Back to Readme](https://github.com/lclms/distpass)</br>
-[Next step, go to backend](https://github.com/lclms/distpass/blob/master/content/Install%20the%20Backend.md)
+[Next step, go to backend](https://github.com/lclms/distpass/blob/master/content/Backend.md)
