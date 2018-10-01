@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+
+
+  function startWorker() {
+
+    var w;
+
+      if(typeof(Worker) !== "undefined") {
+          if(typeof(w) == "undefined") {
+              w = new Worker("demo_workers");
+              
+          }
+          w.onmessage = function(event) {
+              document.getElementById("result").innerHTML = event.data;
+          };
+      } else {
+          document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
+      }
+  }
+
+  startWorker()
+  </script>
+</head>
+<body>
+  SOCKET
+</body>
+</html>
