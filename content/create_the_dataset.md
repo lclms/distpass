@@ -10,7 +10,7 @@ In this dataset we will use the following set of data.
 To continue creating the dataset we use the crunch tool.
 In our concrete case the command used was;
 
-`crunch 1 6 abcdefghijklmnopqrstuvwxyz0123456789 -o az09.txt`
+`crunch 4 4 abcdefghijklmnopqrstuvwxyz0123456789 -o az09.txt`
 
 Running this command will allow you to create a file that will serve as the basis for creating our combinatorial data set.
 
