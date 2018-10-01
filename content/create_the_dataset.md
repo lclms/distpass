@@ -1,6 +1,6 @@
 # Create the Datasets
 
-The system works with two sets of data, a set that is meant to encompass all possible combinations for a given set of characters and another set of data with previously selected words. For this dataset, the "Rockyou" dataset used.
+The system works with two sets of data, a set that is meant to encompass all possible combinations for a given set of characters and another set of data with previously selected words. For this dataset, the "Rockyou" (this data set accompanies the distribution of Kali Linux and comes from an old social network with the same name) dataset used.
 
 ### Create the combinatorial dataset with the crunch tool
 
@@ -27,3 +27,23 @@ MongoDB has a document-based operation, and the previous step was done convertin
 Import the file. The following command must use:
 
 `mongoimport --db db_distPass --collection dictionaries --file file_importa_distpass_brute_force.json`
+
+### Create the dataset dictionary
+
+In this case we need to get the file Rockyou.txt and make the following adaptations of the [distpass_createjson_dataset_bruteforce]( https://github.com/lclms/distpass/blob/master/scripts/distpass_createjson_dataset_bruteforce.py) file.
+
+```
+filepath = 'rockyou.txt'
+file = open('file_importa_distpass_rockyou.json','w')
+...
+file.write(']}{"l": '+s+', "k": "d","t":"'+ty+'","w": [')
+```
+When finished executing, a file JSON of name file_importa_distpass_brute_force will create. Before finalizing, it is necessary to complete the file by moving the first two characters "]}" to the end of the file.
+
+Finally import the file_importa_distpass_rockyou.json file into the database using the following command;
+
+`mongoimport --db db_distPass --collection dictionaries --file file_importa_distpass_rockyou.json`
+
+## Final considerations
+
+Only one set of data can be used, and it is up to the user to adapt the system as desired. You can even use other data sets that you understand. You must always bear in mind that the dataset in the case of brute force doubles each added character. As for the dictionary can always be improved.
