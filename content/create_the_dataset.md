@@ -1,4 +1,4 @@
-# Create the Dataset
+# Create the Datasets
 
 The system works with two sets of data, a set that is meant to encompass all possible combinations for a given set of characters and another set of data with previously selected words. For this dataset, the "Rockyou" dataset used.
 
