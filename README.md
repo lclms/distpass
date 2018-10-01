@@ -27,9 +27,9 @@ Enter the following command to copy the content
 This repository divides into five parts which will be described in more detail while following a practical guide.
 
 * [1. Create the Dataset](https://github.com/lclms/distpass/blob/master/content/create_the_dataset.md)
-* [2. Install the Backend](https://github.com/lclms/distpass/blob/master/content/Install%20the%20Backend.md)
-* [3. Install the Frontend](https://github.com/lclms/distpass/blob/master/content/Install%20the%20Frontend.md)
-* [4. Install the Task Management](https://github.com/lclms/distpass/blob/master/content/Install%20the%20Task%20Management)
+* [2. Backend](https://github.com/lclms/distpass/blob/master/content/Install%20the%20Backend.md)
+* [3. Frontend](https://github.com/lclms/distpass/blob/master/content/Install%20the%20Frontend.md)
+* [4. Task Management](https://github.com/lclms/distpass/blob/master/content/Install%20the%20Task%20Management)
 * [5. Examples of usability](https://github.com/lclms/distpass/blob/master/content/Examples%20of%20usability.md)
 
 
