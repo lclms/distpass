@@ -12,8 +12,8 @@ with open(filepath) as fp:
    cnt = 1
    var = 50000
    dobra = 50000
-   while line:
-       s =  '{}'.format(len(str(line.strip())))     
+   s = "4"
+   while line:     
        try:
            type(int(line.strip()))
            ty="i"            
