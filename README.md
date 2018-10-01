@@ -28,7 +28,7 @@ This repository divides into five parts which will be described in more detail w
 
 * [1. Create the Dataset](https://github.com/lclms/distpass/blob/master/content/create_the_dataset.md)
 * [2. Backend](https://github.com/lclms/distpass/blob/master/content/Backend.md)
-* [3. Frontend](https://github.com/lclms/distpass/blob/master/content/Install%20the%20Frontend.md)
+* [3. Frontend](https://github.com/lclms/distpass/blob/master/content/Frontend.md)
 * [4. Task Management](https://github.com/lclms/distpass/blob/master/content/Task%20Management.md)
 * [5. Examples of usability](https://github.com/lclms/distpass/blob/master/content/Examples%20of%20usability.md)
 
