@@ -12,13 +12,15 @@ In our concrete case the command used was;
 
 `crunch 4 4 abcdefghijklmnopqrstuvwxyz0123456789 -o az09.txt`
 
-Running this command will allow you to create a file that will serve as the basis for creating our combinatorial data set.
+Running this command will allow you to create a file that will serve as the basis for creating our combinatorial data set. We use this data set for size 4 passwords. You can create another size (pay attention to the space in disk and memory of your server).
 
 ### Adapt the file az09.txt to be imported by MongoDB
 
 To transform the file az09.txt it is necessary to execute the file [distpass_createjson_dataset_bruteforce]( https://github.com/lclms/distpass/blob/master/scripts/distpass_createjson_dataset_bruteforce.py), this file is written in Python. 
 
-When finished executing, a file JSON of name file_importa_distpass_brute_force will create. Before finalizing, it is necessary to complete the file by moving the first two characters "]}" to the end of the file. 
+When finished executing, a file JSON of name file_importa_distpass_brute_force will create. Before finalizing, it is necessary to complete the file by moving the first two characters "]}" to the end of the file.
+
+Alternatively you can find the file already prepared [here](https://github.com/lclms/distpass/blob/master/content/file_importa_distpass_brute_force.json).
 
 ### Import the distpass_createjson_dataset_bruteforce file into the database
 
@@ -43,6 +45,12 @@ When finished executing, a file JSON of name file_importa_distpass_brute_force w
 Finally import the file_importa_distpass_rockyou.json file into the database using the following command;
 
 `mongoimport --db db_distPass --collection dictionaries --file file_importa_distpass_rockyou.json`
+
+## Create indexes to make the collection faster
+
+The following image illustrates the creation of a "len" index using the Robo 3T tool.
+
+![create index len](https://github.com/lclms/distpass/blob/master/img/create_index_dic_len.png)
 
 ## Final considerations
 
