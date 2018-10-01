@@ -1,4 +1,4 @@
-# Create the Datasets
+# 1. Create the Datasets
 
 The system works with two sets of data, a set that is meant to encompass all possible combinations for a given set of characters and another set of data with previously selected words. For this dataset, the "Rockyou" (this data set accompanies the distribution of Kali Linux and comes from an old social network with the same name) dataset used.
 
