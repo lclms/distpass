@@ -14,6 +14,7 @@ It assumed that you have the following technologies installed on your machine so
 * [crunch (create the world list)](https://tools.kali.org/password-attacks/crunch)
 * [Python (used to create the json file for the dataset)](https://www.python.org/downloads/)
 * [Robo 3T (management of the database)](https://robomongo.org)
+* [Git (system for tracking changes in computer files)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ### Content 
 
