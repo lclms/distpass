@@ -24,3 +24,7 @@ This repository divides into five parts which will be described in more detail w
 * [Install the Frontend](https://github.com/lclms/distpass/blob/master/content/Install%20the%20Frontend.md)
 * [Install the Task Management](https://github.com/lclms/distpass/blob/master/content/Install%20the%20Task%20Management)
 * [Examples of usability](https://github.com/lclms/distpass/blob/master/content/Examples%20of%20usability.md)
+
+___
+[Back to Readme](https://github.com/lclms/distpass)</br>
+[Next step, install the backend](https://github.com/lclms/distpass/blob/master/content/Install%20the%20Backend.md)
