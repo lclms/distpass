@@ -33,36 +33,27 @@ function WorkController($http, msgs, tabs, HelloWorldService) {
       
       vm.distPass.created = Date.now()
       vm.distPass.status = 'Ready'
+      vm.distPass.t = "d"
       //const urlsgDicUrl = `${urlsgDic}/${vm.distPass.lengthMin}/${vm.distPass.lengthMax}`
       //$http.get(urlsgDic).then(function(response) {/*vm.distPass.totalWordsAvailable = parseInt(response)*/ console.log(response)})
 
       const checkUrl = `${url}/?name=${vm.distPass.name}`
-      const addWorkUrl = `${urlDic}/${vm.distPass.name}/${vm.distPass.lengthMin}/${vm.distPass.lengthMax}/D`
-
-
+        const addWorkUrl = `${urlDic}/${vm.distPass.name}/${vm.distPass.lengthMin}/${vm.distPass.lengthMax}/${vm.distPass.t}/${vm.distPass.charset}`
       //console.log(addWorkUrl) 
       $http.get(checkUrl).then(function(resp){
 
-          if(!resp.data[0]){
-
-            
-
+          if(!resp.data[0]){           
             console.log(vm.distPass.totalWordsAvailable)
               vm.distPass.typeAttack = "Dictionaries"
             $http.post(url, vm.distPass).then(function(response) {
 
               $http.put(addWorkUrl)
-
-              
-
               vm.refresh()
               msgs.addSuccess('Register successful')
             }).catch(function(resp) {
               msgs.addError(resp.data.errors)
             })
 
-                     
-          
           }else
           {
             msgs.addError('Already exists a job with the indicated name')
@@ -72,12 +63,10 @@ function WorkController($http, msgs, tabs, HelloWorldService) {
         })
         
       }
-      vm.createBF = function() {
-
-      
+      vm.createBF = function() {   
         vm.distPass.created = Date.now()
         vm.distPass.status = 'Ready'
-        vm.distPass.t = "B"
+        vm.distPass.t = "b"
 
         //const addWorkUrl = `${urlDic}/${vm.distPass.name}/${vm.distPass.lengthMin}/${vm.distPass.lengthMax}/B`
         console.log(vm.distPass.charset)
