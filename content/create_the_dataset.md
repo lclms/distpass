@@ -38,7 +38,7 @@ In this case we need to get the file Rockyou.txt and make the following adaptati
 filepath = 'rockyou.txt'
 file = open('file_importa_distpass_rockyou.json','w')
 ...
-file.write(']}{"l": '+s+', "k": "D","t":"'+ty+'","w": [')
+file.write(']}{"l": '+s+', "k": "d","t":"'+ty+'","w": [')
 ```
 When finished executing, a file JSON of name file_importa_distpass_brute_force will create. Before finalizing, it is necessary to complete the file by moving the first two characters "]}" to the end of the file.
 
