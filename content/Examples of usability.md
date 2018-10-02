@@ -24,5 +24,9 @@ You should make sure that you properly configure the IP in the demo_worker.js fi
 
 Line 5</br>
 `var socket = io.connect('http://xxx.xxx.xxx.xxx:8080',{'forceNew':true});`
+
+From the second insert the previously defined IP to start the job. You can access it with any web browser that can access the server. The image below shows the result through the terminal.
+
+![](https://github.com/lclms/distpass/blob/master/img/terminal_Success_work.png)
 ___
 [Back to Readme](https://github.com/lclms/distpass)</br>
