@@ -71,7 +71,7 @@ MongoClient.connect(url, function(err, db) {
           if(work[0]['typeAttack'] == "Dictionaries"){typeMode = "d"}else{typeMode="b"}
 
           //dbo.collection("diccionaries").find({$and: [ {kind: typeMode}, {wordInUse: ""}, {works: workName} ]},{_id: 0, w: 1}).limit(2000).toArray(function(err, result) {
-          dbo.collection("dictionaries").find({$and: [ {wordInUse: ""}, {works: workName},{t: typeMode} ]},{_id: 0, w: 1}).limit(1).toArray(function(err, result) {
+          dbo.collection("dictionaries").find({$and: [ {wordInUse: ""}, {works: workName},{k: typeMode} ]},{_id: 0, w: 1}).limit(1).toArray(function(err, result) {
 
             if (err) throw err;
             //console.log(result);
